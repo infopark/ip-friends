@@ -1,5 +1,5 @@
 const defaultPageAttributes = {
-  body: ['widgetlist', { only: 'SectionWidget' }],
+  body: 'widgetlist',
   title: 'string',
 };
 

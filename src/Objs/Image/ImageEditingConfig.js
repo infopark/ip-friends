@@ -16,6 +16,7 @@ Scrivito.provideEditingConfig('Image', {
     'blob',
     'alternativeText',
     'tags',
+    'licence',
   ],
 });
 

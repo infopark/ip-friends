@@ -1,6 +1,8 @@
 Scrivito.configureContentBrowser({
   filters: {
     _objClass: {
+      field: '_objClass',
+      operator: 'equals',
       options: {
         All: {
           title: 'All',
@@ -8,51 +10,28 @@ Scrivito.configureContentBrowser({
           query: Scrivito.Obj.all(),
           selected: true,
         },
+        Authors: {
+          title: 'Autoren',
+          icon: 'person',
+          value: 'Author',
+        },
         Images: {
           title: 'Images',
           icon: 'image',
-          field: '_objClass',
           value: 'Image',
         },
         Pages: {
           title: 'Pages',
           icon: 'sheet',
-          field: '_objClass',
           value: [
-            'Author',
             'Blog',
             'BlogPost',
-            'Event',
             'Homepage',
-            'Job',
-            'LandingPage',
-            'Page',
-            'SearchResults',
           ],
           options: {
-            Page: {
-              title: 'Standard pages',
-              icon: 'sheet',
-            },
-            LandingPage: {
-              title: 'Landing pages',
-              icon: 'inbox',
-            },
             BlogPost: {
               title: 'Blog posts',
               icon: 'pen',
-            },
-            Author: {
-              title: 'Authors',
-              icon: 'user',
-            },
-            Event: {
-              title: 'Events',
-              icon: 'cal',
-            },
-            Job: {
-              title: 'Jobs',
-              icon: 'suitcase',
             },
             Homepage: {
               title: 'Homepage',
@@ -62,23 +41,7 @@ Scrivito.configureContentBrowser({
               title: 'Blog',
               icon: 'pen',
             },
-            SearchResults: {
-              title: 'Search results',
-              icon: 'lens',
-            },
           },
-        },
-        Download: {
-          title: 'Downloads',
-          icon: 'pdf',
-          field: '_objClass',
-          value: 'Download',
-        },
-        Video: {
-          title: 'Videos',
-          icon: 'video',
-          field: '_objClass',
-          value: 'Video',
         },
       },
     },
