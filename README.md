@@ -17,14 +17,16 @@ Basic Scrivito JS Applikation for the Infopark & Friends Workshop: Website-Entwi
 - Browser Console öffnen
 - Frage auf "scrivito-application" wechseln
 - In der Konsole folgende Kommandos ausführen
-  ```
-  await Scrivito.load( () => {
-    for( let obj of Scrivito.Obj.all() ) { 
-      console.log("Obj: " + obj.id());
-      obj.destroy();
-    }
-    Scrivito.getClass('Homepage').create({
-      _path: "/"
+  ```javascript
+  Scrivito.load(() => [...Scrivito.Obj.all()])
+    .then((objs) => {
+      objs.forEach(obj => {
+        console.log("Obj: " + obj.id());
+        obj.destroy();
+      });
+      Scrivito.getClass('Homepage').create({
+        _path: "/"
+      });
+      console.log("Done");
     });
-  })
   ```
